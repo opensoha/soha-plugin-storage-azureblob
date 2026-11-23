@@ -1,0 +1,67 @@
+{
+  "id": "opensoha.azure-blob",
+  "name": "Azure Blob Storage",
+  "version": "0.1.0",
+  "publisher": "OpenSoha",
+  "type": "resource-extension",
+  "description": "Use an Azure Blob Storage container as a Soha object storage connection.",
+  "runtime": {
+    "mode": "executable-package-v1"
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "container",
+      "account",
+      "sas_token"
+    ],
+    "properties": {
+      "container": {
+        "type": "string",
+        "title": "Container",
+        "description": "Name of an existing Azure Blob container."
+      },
+      "account": {
+        "type": "string",
+        "title": "Storage account",
+        "description": "Azure storage account name."
+      },
+      "prefix": {
+        "type": "string",
+        "title": "Object prefix",
+        "description": "Optional folder prefix within the container."
+      },
+      "endpoint": {
+        "type": "string",
+        "title": "Endpoint",
+        "description": "Leave blank for Azure. For local Azurite, use a literal loopback HTTP URL with an explicit port."
+      },
+      "sas_token": {
+        "type": "string",
+        "title": "Container SAS token",
+        "description": "Reference a container SAS with read, create, write, list, and delete permissions.",
+        "x-soha-widget": "secret-ref"
+      }
+    },
+    "x-soha-test-connection-action": "storage.testConnection"
+  },
+  "components": {
+    "backend": {
+      "driverId": "opensoha.azure-blob",
+      "protocol": "object-storage/v1",
+      "platforms": {
+        "linux/amd64": {
+          "name": "backend-linux-amd64",
+          "byteLength": 17728349,
+          "sha256": "eaf5bbecaa272581083ef127795775326a6ed6028653e46ce8439ef5e6597c74"
+        },
+        "linux/arm64": {
+          "name": "backend-linux-arm64",
+          "byteLength": 16287979,
+          "sha256": "1dbfd1ec16ab4595081d52d60d1d343224dffc284fc73ea6f720ed2dde41f367"
+        }
+      }
+    }
+  }
+}
