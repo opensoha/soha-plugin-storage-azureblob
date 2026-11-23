@@ -1,7 +1,7 @@
 {
   "id": "opensoha.azure-blob",
   "name": "Azure Blob Storage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "OpenSoha",
   "type": "resource-extension",
   "description": "Use an Azure Blob Storage container as a Soha object storage connection.",
@@ -54,12 +54,12 @@
         "linux/amd64": {
           "name": "backend-linux-amd64",
           "byteLength": 17728349,
-          "sha256": "eaf5bbecaa272581083ef127795775326a6ed6028653e46ce8439ef5e6597c74"
+          "sha256": "396b35dcdd612c592bb48f83a6db0ac5ccd840a25e71f5376a03ff390e54a7e8"
         },
         "linux/arm64": {
           "name": "backend-linux-arm64",
           "byteLength": 16287979,
-          "sha256": "1dbfd1ec16ab4595081d52d60d1d343224dffc284fc73ea6f720ed2dde41f367"
+          "sha256": "b981b98c4ee82947ca444109d93b39f82170c3e85011ed79dc2787fd964fa7fb"
         }
       }
     }
